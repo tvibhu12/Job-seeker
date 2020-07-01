@@ -17,10 +17,27 @@ async function fetchGithub(){
         onPage++;
         console.log('got' + jobs.length + ' jobs')
     }
+
     console.log('total jobs' + allJobs.length  )
+     //Filter algo
+    const jrJobs=allJobs.filter((job)=>{
+        const lowerTitle=job.title.toLowerCase();
+        if(lowerTitle.includes('senior')||lowerTitle.includes('manager')||lowerTitle.includes('sr.')||lowerTitle.includes('architect'))
+        {
+            return false
+        }else{
+            return true
+        }
+    })
+    console.log('jrJObs is '+ jrJobs.length)
+
+   
     const success= await setAsync('github',JSON.stringify(allJobs))
     console.log(success)
  }
+
+
+
 
  fetchGithub()
 
