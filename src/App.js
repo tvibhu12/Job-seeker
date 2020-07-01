@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Jobs from './components/Jobs/Jobs'
-import JobModal from './components/JobModal/JobModal'
+
 const Base_url='https://conservative-beaver-56553.herokuapp.com/jobs'
 export default function App() {
   
