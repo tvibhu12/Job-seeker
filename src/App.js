@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css'
 import Jobs from './components/Jobs/Jobs'
-const Base_url='http://localhost:3001/jobs'
+import JobModal from './components/JobModal/JobModal'
+const Base_url='https://conservative-beaver-56553.herokuapp.com/jobs'
 export default function App() {
   
   const [jobsList,setJobs]=React.useState([])
@@ -11,6 +12,7 @@ export default function App() {
 
   return (
     <div>
+    
       <Jobs jobs={jobsList}/> 
      
     </div>
